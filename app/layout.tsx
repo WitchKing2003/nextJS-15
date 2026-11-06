@@ -23,15 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <header className="bg-gray-900 text-white p-4">
-        <h1 className="text-2xl font-bold">Hello World App</h1>
-      </header>
       <body className="h-full">{children}</body>
-      <footer className="bg-gray-900 text-white p-4">
-        <p className="text-center">
-          &copy; 2024 Hello World App. All rights reserved.
-        </p>
-      </footer>
     </html>
   );
 }
