@@ -3,10 +3,12 @@ export default function ProductLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      {children}
-      <h2>Product</h2>
-    </>
-  );
+   return (
+     <html lang="en">
+       <body>
+         {children}
+         <footer>Footer of product  list</footer>
+       </body>
+     </html>
+   );
 }

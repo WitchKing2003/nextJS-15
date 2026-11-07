@@ -4,9 +4,11 @@ export default function ProductDetailsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      {children}
-      <h2>Product Details Layout</h2>
-    </>
+    <html lang="en">
+      <body>
+        {children}
+        <footer>Footer of marketing</footer>
+      </body>
+    </html>
   );
 }
