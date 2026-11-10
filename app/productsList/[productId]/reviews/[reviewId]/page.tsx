@@ -14,7 +14,7 @@ export default function ReviewDetail({
 }) {
   const { productId, reviewId } = use(params);
   const random = getRandomInt(2);
-  if (random < 5) {
+  if (random > 11) {
     throw new Error("Error in reviewId");
   }
 
