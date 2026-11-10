@@ -3,12 +3,20 @@
 import { use } from "react";
 import { redirect, notFound } from "next/navigation";
 
+function getRandomInt(count: number) {
+  return Math.floor(Math.random() * count) + 1;
+}
+
 export default function ReviewDetail({
   params,
 }: {
   params: Promise<{ productId: string; reviewId: string }>;
 }) {
   const { productId, reviewId } = use(params);
+  const random = getRandomInt(2);
+  if (random < 5) {
+    throw new Error("Error in reviewId");
+  }
 
   if (parseInt(reviewId) > 10) {
     return redirect("/");
