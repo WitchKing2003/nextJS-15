@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { use } from "react";
 
@@ -11,21 +13,21 @@ export default function NewsArticle({
   const { articleId } = use(params);
   const { lang } = use(searchParams);
   return (
-    <div className="">
-      <h1>News Article {articleId}</h1>
-      <p>Reading in language: {lang}</p>
+    <>
+      <h1 className="text-2xl font-bold">News Article {articleId}</h1>
+      <p className="text-lg text-gray-700">Reading in language: {lang}</p>
 
-      <div className="">
-        <Link href={`/articles/${articleId}?lang=en`} prefetch={false}>
+      <div className="flex space-x-4">
+        <Link href={`/articles/${articleId}?lang=en`}>
           Go to Articles English
         </Link>
-        <Link href={`/articles/${articleId}?lang=fr`} prefetch={false}>
+        <Link href={`/articles/${articleId}?lang=fr`}>
           Go to Articles French
         </Link>
-        <Link href={`/articles/${articleId}?lang=es`} prefetch={false}>
+        <Link href={`/articles/${articleId}?lang=es`}>
           Go to Articles Spanish
         </Link>
       </div>
-    </div>
+    </>
   );
 }

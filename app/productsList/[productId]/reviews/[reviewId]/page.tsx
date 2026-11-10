@@ -1,7 +1,7 @@
 "use client";
 
 import { use } from "react";
-import NotFound from "../../../../not-found";
+import { redirect, notFound } from "next/navigation";
 
 export default function ReviewDetail({
   params,
@@ -11,7 +11,7 @@ export default function ReviewDetail({
   const { productId, reviewId } = use(params);
 
   if (parseInt(reviewId) > 10) {
-    return <NotFound />;
+    return redirect("/");
   }
 
   return (
