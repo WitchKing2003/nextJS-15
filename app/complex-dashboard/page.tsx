@@ -1,3 +1,3 @@
 export default function ComplexDashboard() {
-    return <h1>ComplexDashboard</h1>;
+    return <h1>Complex Dashboard</h1>;
 }
