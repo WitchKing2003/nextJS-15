@@ -1,5 +1,5 @@
 import { CardCompoent } from "@/components/Card/CardCompoent";
 
-export default function UserAnlytics() {
+export default function Users() {
   return <CardCompoent>UserAnlytics</CardCompoent>;
 }

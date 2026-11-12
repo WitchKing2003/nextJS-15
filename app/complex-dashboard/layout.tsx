@@ -1,30 +1,31 @@
-import Notifications from "./@notifications/page";
-import RevenueMetrics from "./@revenuemetrics/page";
-import UserAnlytics from "./@useranlytics/page";
-
 export default function ComplexDashboardLayout({
   children,
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = false;
+  return isLoggedIn ? (
     <>
       <div className="">{children}</div>
       <div className="flex">
         <div className="flex flex-col">
-          <div className="flex-1">{users}</div>
-          <div className="flex-1">{revenue}</div>
+          <div>{users}</div>
+          <div>{revenue}</div>
         </div>
         <div className="flex flex-1">
-          <div className="flex-1">{notifications}</div>
+          <div>{notifications}</div>
         </div>
       </div>
     </>
+  ) : (
+    login
   );
 }
